@@ -1,47 +1,63 @@
 public class Stack {
-private int maxsize;  
-public  int top;
-private char [] stackArray;
+    private int max = 80;
+    private int top = -1;
+    private boolean overflow = false;
+    private boolean underflow = false;
+    private Object[] data = new Object[max];
 
-public Stack(int size) {    
-  this.maxsize = size;
-  this.top = -1;
-  this.stackArray = new char[maxsize];
-}
+    public Stack() {
 
-public void push(char element) {
-    if (isFull()) {
-        System.out.println("Stack Overflow. Cannot push " + element);
-        return;
     }
-    stackArray[++top] = element;
-    System.out.println(element + " pushed to stack");
-}
 
-public char pop() {
-    if (isEmpty()) {
-        System.out.println("Stack Underflow. Cannot pop");
-        return '\0';
+    public Stack(int max) {
+        this.max= max;
     }
-    return stackArray[top--];
+
+    public int getTop() {
+        return top;
+    }
     
-}
+    public boolean is_empty() {
+        return this.top == -1;
+    }
 
-public char peek() {
-if (isEmpty()) {
-    System.out.println("Stack Underflow. Cannot peek");
-    return '\0';
-} else{
-    return stackArray[top];
-}
+    public boolean is_full() {
+        return this.top == max;
+    }
 
-}
-public boolean isEmpty() {
-    return (top == -1);
-}
+    public Object peek() {
+        if (top==-1) {
+            return 0;
+        }
+        return data[top];
+    }
 
-public boolean isFull() {
-    return (top == maxsize - 1);
-}
+    public void push(Object o) {
+        if (is_full()) {
+            overflow = true;
+            System.out.println("An overflow has occurred");
+        }
+        else {
+            System.err.println("pushing "+ o);
+            overflow = false;
+            this.top += 1;
+            data[top] = o;
+        }
+    }
+
+    public Object pop() {
+        if (is_empty()) {
+            underflow = true;
+            System.out.println("An underflow has occurred");
+            return null;
+        }
+        else {
+            underflow = false;
+            Object element = data[top];
+            System.err.println("popping "+ element);
+            this.top -= 1;
+            return element;
+        }
+    }
 
 }

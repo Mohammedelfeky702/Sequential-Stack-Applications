@@ -6,7 +6,7 @@ public class StringInversion {
             stack.push(input.charAt(i));
         }
         StringBuilder reversed = new StringBuilder();
-        while(!stack.isEmpty()){
+        while(!stack.is_empty()){
             reversed.append(stack.pop());
         }
         return reversed.toString();

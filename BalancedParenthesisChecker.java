@@ -8,17 +8,17 @@ public class BalancedParenthesisChecker {
         if (ch == '(' || ch == '{' || ch == '[') {
             stack.push(ch);
         } else if (ch == ')' || ch == '}' || ch == ']') {
-            if (stack.isEmpty()){
+            if (stack.is_empty()){
                 return false;
             }
-            char top =stack.pop();
+            char top = (Character)stack.pop();
             if(!isMatchingPair(top,ch)) {
                 return false;
         
     }
 }
     } 
-    return stack.isEmpty();
+    return stack.is_empty();
 }
 
 private static boolean isMatchingPair(char open, char close) {

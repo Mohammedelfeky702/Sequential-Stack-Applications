@@ -25,7 +25,7 @@ System.out.println("Expresstion "+expresstion1 +"->"+(isBalanced(expresstion1)?"
       Stack s = new Stack(80);
 
       while (run) {
-        System.out.println("\n=========== Choose an option ===========\n");
+        System.out.println("\n=========== eChoose an option ===========\n");
         System.out.println("A) Re-nitialize the stack");
         System.out.println("B) Push to the stack");
         System.out.println("C) Pop from the stack");
@@ -49,19 +49,19 @@ System.out.println("Expresstion "+expresstion1 +"->"+(isBalanced(expresstion1)?"
             s.push(element);
             break;
           case "C":
-            char c = s.pop();
-            if (s.isEmpty()) {
+            Object c = s.pop();
+            if (s.is_empty()) {
               System.out.println("The stack is empty");
               break;
             }
             System.out.print(c + " has been popped");
             break;
           case "D":
-            if (s.isEmpty()) {
+            if (s.is_empty()) {
               System.out.println("The stack is empty");
               break;
             }
-            char top = s.peek();
+            Object top = s.peek();
             System.out.print(top + " is at the top of the stack");
             break;
           case "E":
