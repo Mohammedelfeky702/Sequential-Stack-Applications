@@ -39,11 +39,13 @@ System.out.println("Expresstion "+expresstion1 +"->"+(isBalanced(expresstion1)?"
           case "A":
             System.out.print("Please enter the stack size: ");
             int size = sc.nextInt();
+            sc.nextLine();
             s = new Stack(size);
             break;
           case "B":
             System.out.print("Please enter the element you want to push: ");
             char element = sc.next().charAt(0);
+            sc.nextLine();
             s.push(element);
             break;
           case "C":
@@ -65,7 +67,7 @@ System.out.println("Expresstion "+expresstion1 +"->"+(isBalanced(expresstion1)?"
           case "E":
             System.err.print("Enter the expression to check: ");
             String expresstion = sc.nextLine();
-            System.out.println("Expresstion "+ expresstion +" is "+(BalancedParenthesisChecker.isBalanced(expresstion)?"Balanced":"Not Balanced"));
+            System.out.println("Expresstion "+ expresstion +" is "+(BalancedParenthesisChecker.isBalanced(expresstion)?"balanced":"NOT balanced"));
             break;
           case "F":
             run = false;
