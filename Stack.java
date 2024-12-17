@@ -22,7 +22,7 @@ public class Stack {
     }
 
     public boolean is_full() {
-        return this.top == max;
+        return this.top == max-1;
     }
 
     public Object peek() {
