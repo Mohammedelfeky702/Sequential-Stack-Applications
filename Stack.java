@@ -38,7 +38,7 @@ public class Stack {
             System.out.println("An overflow has occurred");
         }
         else {
-            System.err.println("pushing "+ o);
+            System.out.println("pushing "+ o);
             overflow = false;
             this.top += 1;
             data[top] = o;
@@ -54,7 +54,7 @@ public class Stack {
         else {
             underflow = false;
             Object element = data[top];
-            System.err.println("popping "+ element);
+            System.out.println("popping "+ element);
             this.top -= 1;
             return element;
         }
