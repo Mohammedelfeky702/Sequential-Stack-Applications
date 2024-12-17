@@ -16,7 +16,9 @@ public class Main {
         System.out.println("D) Peek at the top element");
         System.out.println("E) Check an expression");
         System.out.println("F) Reverse a string");
-        System.out.println("G) Exit");
+        System.out.println("G) Check if stack is full");
+        System.out.println("H) Check if stack is empty");
+        System.out.println("I) Exit");
 
         String input = sc.nextLine();
         input = input.toUpperCase();
@@ -29,8 +31,7 @@ public class Main {
             break;
           case "B":
             System.out.print("Please enter the element you want to push: ");
-            char element = sc.next().charAt(0);
-            sc.nextLine();
+            String element = sc.nextLine();
             s.push(element);
             break;
           case "C":
@@ -60,6 +61,12 @@ public class Main {
           System.out.println("String "+ string +" reversed is "+(StringInversion.inverseString(string)));
           break;
           case "G":
+            System.out.println("Stack is "+(s.is_full()?"full":"not full"));
+            break;
+          case "H":
+          System.out.println("Stack is "+(s.is_empty()?"empty":"not empty"));
+          break;
+          case "I":
             run = false;
             break;
           default:
