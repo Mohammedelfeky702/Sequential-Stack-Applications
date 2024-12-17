@@ -9,7 +9,7 @@ public class Main {
       Stack s = new Stack(80);
 
       while (run) {
-        System.out.println("\n=========== eChoose an option ===========\n");
+        System.out.println("\n=========== Choose an option ===========\n");
         System.out.println("A) Re-nitialize the stack");
         System.out.println("B) Push to the stack");
         System.out.println("C) Pop from the stack");
@@ -52,8 +52,8 @@ public class Main {
             break;
           case "E":
             System.err.print("Enter the expression to check: ");
-            String expresstion = sc.nextLine();
-            System.out.println("Expresstion "+ expresstion +" is "+(BalancedParenthesisChecker.isBalanced(expresstion)?"balanced":"NOT balanced"));
+            String expression = sc.nextLine();
+            System.out.println("Expression "+ expression +" is "+(BalancedParenthesisChecker.isBalanced(expression)?"balanced":"NOT balanced"));
             break;
           case "F":
           System.err.print("Enter the string to reverse: ");
