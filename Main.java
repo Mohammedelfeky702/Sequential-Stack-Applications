@@ -10,7 +10,7 @@ public class Main {
 
       while (run) {
         System.out.println("\n=========== Choose an option ===========\n");
-        System.out.println("A) Re-nitialize the stack");
+        System.out.println("A) Re-initialize the stack");
         System.out.println("B) Push to the stack");
         System.out.println("C) Pop from the stack");
         System.out.println("D) Peek at the top element");
@@ -51,12 +51,12 @@ public class Main {
             System.out.print(top + " is at the top of the stack");
             break;
           case "E":
-            System.err.print("Enter the expression to check: ");
+            System.out.print("Enter the expression to check: ");
             String expression = sc.nextLine();
             System.out.println("Expression "+ expression +" is "+(BalancedParenthesisChecker.isBalanced(expression)?"balanced":"NOT balanced"));
             break;
           case "F":
-          System.err.print("Enter the string to reverse: ");
+          System.out.print("Enter the string to reverse: ");
           String string = sc.nextLine();
           System.out.println("String "+ string +" reversed is "+(StringInversion.inverseString(string)));
           break;
