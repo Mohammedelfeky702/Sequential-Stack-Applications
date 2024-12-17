@@ -35,11 +35,11 @@ public class Main {
             s.push(element);
             break;
           case "C":
-            Object c = s.pop();
             if (s.is_empty()) {
               System.out.println("The stack is empty");
               break;
             }
+            Object c = s.pop();
             System.out.print(c + " has been popped");
             break;
           case "D":
