@@ -15,7 +15,8 @@ public class Main {
         System.out.println("C) Pop from the stack");
         System.out.println("D) Peek at the top element");
         System.out.println("E) Check an expression");
-        System.out.println("F) Exit");
+        System.out.println("F) Reverse a string");
+        System.out.println("G) Exit");
 
         String input = sc.nextLine();
         input = input.toUpperCase();
@@ -54,6 +55,11 @@ public class Main {
             System.out.println("Expresstion "+ expresstion +" is "+(BalancedParenthesisChecker.isBalanced(expresstion)?"balanced":"NOT balanced"));
             break;
           case "F":
+          System.err.print("Enter the string to reverse: ");
+          String string = sc.nextLine();
+          System.out.println("String "+ string +" reversed is "+(StringInversion.inverseString(string)));
+          break;
+          case "G":
             run = false;
             break;
           default:
