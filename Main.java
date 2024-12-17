@@ -5,8 +5,9 @@ public class Main {
       Scanner sc = new Scanner(System.in);
       boolean run = true;
 
-      System.out.println("Please enter the stack size");
-      Stack s = new Stack(80);
+      System.out.print("Please enter the stack size: ");
+      int stackSize = sc.nextInt();
+      Stack s = new Stack(stackSize);
 
       while (run) {
         System.out.println("\n=========== Choose an option ===========\n");
