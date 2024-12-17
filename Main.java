@@ -21,7 +21,7 @@ public class Main {
         System.out.println("H) Check if stack is empty");
         System.out.println("I) Exit");
 
-        String input = sc.nextLine();
+        String input = sc.nextLine().trim();
         input = input.toUpperCase();
         switch(input) {
           case "A":
